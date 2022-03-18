@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 export default function Start() {
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
     if(visible) {
         return (
-            <div className="first-page">
-                <img src="assets/logo.png" />
+            <div className="start">
+                <img src="assets/logo.png" alt="Logo"/>
                 <h1>ZapRecall</h1>
                 <button onClick={()=>setVisible(false)}>Iniciar Recall!</button>
             </div>

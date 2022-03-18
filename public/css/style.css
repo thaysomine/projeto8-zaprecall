@@ -4,19 +4,18 @@
     background-color: #FB6B6B;
 }
 
-.first-page {
+/* FIRST PAGE (START)*/
+.start {
     text-align: center;
     position: relative;
     top: 50%;
     transform: translateY(-50%); 
 }
-
-.first-page img{
+.start img{
     width: 110px;
     height: 130px;
 }
-
-.first-page h1 {
+.start h1 {
     font-family: 'Righteous';
     font-weight: 400;
     font-size: 55px;
@@ -24,8 +23,7 @@
     margin-bottom: 170px;
     color: #FFFFFF;
 }
-
-.first-page button {
+.start button {
     width: 280px;
     height: 60px;
     background: #FFFFFF;
@@ -39,4 +37,88 @@
     line-height: 14px;
     text-align: center;
     color: #D70900;
+}
+
+/* SECOND PAGE (QUESTIONS)*/
+/*header*/
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left:0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+header img {
+    width: 52px;
+    height: 60px;
+    margin-right: 10px;
+}
+header p {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+}
+/*questions*/
+.deck {
+    margin-left: 18px;
+    margin-right: 18px;
+    padding-top: 200px;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box; 
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background: #FFFFFF;
+
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #333333;
+}
+.question img {
+    width: 26px;
+    height: 30px;
+}
+/*footer*/
+footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+footer p {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #333333;
 }
