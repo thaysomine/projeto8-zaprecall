@@ -1,7 +1,10 @@
+body {
+    background-color: #FB6B6B;
+}
 .root {
     width: 100vw;
     height: 100vh;
-    background-color: #FB6B6B;
+    
 }
 
 /* FIRST PAGE (START)*/
@@ -44,9 +47,6 @@
 header {
     width: 100%;
     display: flex;
-    position: fixed;
-    top: 0;
-    left:0;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
@@ -74,13 +74,15 @@ header p {
 .deck {
     margin-left: 18px;
     margin-right: 18px;
-    padding-top: 200px;
+    padding-top: 25px;
+    padding-bottom: 100px;
 }
-.question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+.card {
+    position: relative;
+}
+.question,
+.question-description,
+.answer {
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 20px;
@@ -89,18 +91,75 @@ header p {
     box-sizing: border-box; 
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    background: #FFFFFF;
 
     font-family: 'Recursive';
-    font-style: normal;
-    font-weight: 700;
+    font-style: normal;  
     font-size: 24px;
     line-height: 28px;
     color: #333333;
 }
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background: #FFFFFF;
+    font-weight: 700;
+}
 .question img {
     width: 26px;
     height: 30px;
+}
+/*question description*/
+.question-description,
+.answer {
+    min-height: 160px;
+    margin-bottom: 28px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: #FFFFD4;
+}
+.question-description img {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+}
+/*answer*/
+.response {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+.response .red,
+.response .green,
+.response .yellow {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;    
+    padding: 12px;
+}
+.red {
+    background: #FF3030;
+}
+.green {
+    background: #2FBE34;
+}
+.yellow {
+    background: #FF922E;
 }
 /*footer*/
 footer {
