@@ -79,6 +79,9 @@ header p {
     padding-top: 25px;
     padding-bottom: 100px;
 }
+.ajust-padding {
+    padding-bottom: 200px;
+}
 .question,
 .question-description,
 .answer {

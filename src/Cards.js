@@ -2,9 +2,9 @@ import Card from "./Card"
 
 export default function Cards(props) { 
     const {questionCards, completed, setCompleted, iconList, setIconList, setWrongAnswer} = props;
-    
+    const css = completed === 8 ? "card ajust-padding" : "card"
     return (
-        <div className="card">
+        <div className={css}>
             {questionCards.map((card, i) => {
                 return (
                     <Card  
