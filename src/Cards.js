@@ -1,7 +1,8 @@
 import Card from "./Card"
 
 export default function Cards(props) { 
-    const {completed, setCompleted} = props
+    const {completed, setCompleted, iconList, setIconList} = props;
+
     const questionCards = [
         {
             question:"O que é JSX?",
@@ -36,6 +37,12 @@ export default function Cards(props) {
             answer:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente}"
         }
     ];
+
+    function comparador() {
+        return Math.random() - 0.5;
+    }
+    questionCards.sort(comparador)
+
     return (
         <div className="card">
             {questionCards.map((card, i) => {
@@ -47,6 +54,8 @@ export default function Cards(props) {
                         answer={card.answer}
                         completed={completed}
                         setCompleted={setCompleted}
+                        iconList={iconList}
+                        setIconList={setIconList}
                     />
                 )
             })}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Card(props) {
-    const {num, question, answer, completed, setCompleted} = props
+    const {num, question, answer, completed, setCompleted, iconList, setIconList} = props
     const [cardState, setCardState] = useState("question");
     if (cardState === "question") {
         return (
@@ -14,8 +14,8 @@ export default function Card(props) {
         return (
             <div className="question-description" onClick={()=>setCardState("question")}>
                 <p>{question}</p>
-                <img src="assets/setinha.png" alt="setinha" onClick={(e) => {
-                        e.stopPropagation()
+                <img src="assets/setinha.png" alt="setinha" onClick={(card) => {
+                        card.stopPropagation()
                         setCardState("answer")
                     }}/>
             </div>
@@ -27,17 +27,20 @@ export default function Card(props) {
                 <div className="response">
                     <div className="red" onClick={() => {
                         setCompleted(completed+1)
+                        setIconList([...iconList, <img src="assets/red.png" alt="red"/>])                        
                         setCardState("red")
                     }}>
                         Não lembrei
                     </div>
                     <div className="yellow" onClick={() => {
+                        setIconList([...iconList, <img src="assets/yellow.png" alt="yellow"/>])
                         setCompleted(completed+1)
                         setCardState("yellow")
                     }}>
                         Quase não lembrei
                     </div>
                     <div className="green" onClick={() => {
+                        setIconList([...iconList, <img src="assets/green.png" alt="green"/>])
                         setCompleted(completed+1)
                         setCardState("green")
                     }}>
