@@ -1,7 +1,7 @@
 import Card from "./Card"
 
 export default function Cards(props) { 
-    const {completed, setCompleted, iconList, setIconList} = props;
+    const {completed, setCompleted, iconList, setIconList, setWrongAnswer} = props;
 
     const questionCards = [
         {
@@ -34,7 +34,7 @@ export default function Cards(props) {
         },
         {
             question:"Usamos estado (state) para __", 
-            answer:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente}"
+            answer:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
         }
     ];
 
@@ -56,6 +56,7 @@ export default function Cards(props) {
                         setCompleted={setCompleted}
                         iconList={iconList}
                         setIconList={setIconList}
+                        setWrongAnswer={setWrongAnswer}
                     />
                 )
             })}

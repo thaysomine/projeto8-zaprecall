@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function Deck() {
     const [completed, setCompleted] = useState(0);
     const [iconList, setIconList] = useState([]);
+    const [wrongAnswer, setWrongAnswer] = useState(false);
     return (
         <> 
             <Header />
@@ -14,10 +15,12 @@ export default function Deck() {
                 setCompleted={setCompleted}
                 iconList={iconList}
                 setIconList={setIconList}
+                setWrongAnswer={setWrongAnswer}
             />
             <Footer
                 completed={completed}
                 iconList={iconList}
+                wrongAnswer={wrongAnswer}
             />
         </>
     )

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Card(props) {
-    const {num, question, answer, completed, setCompleted, iconList, setIconList} = props
+    const {num, question, answer, completed, setCompleted, iconList, setIconList, setWrongAnswer} = props
     const [cardState, setCardState] = useState("question");
     if (cardState === "question") {
         return (
@@ -27,7 +27,8 @@ export default function Card(props) {
                 <div className="response">
                     <div className="red" onClick={() => {
                         setCompleted(completed+1)
-                        setIconList([...iconList, <img src="assets/red.png" alt="red"/>])                        
+                        setIconList([...iconList, <img src="assets/red.png" alt="red"/>])
+                        setWrongAnswer(true)                      
                         setCardState("red")
                     }}>
                         Não lembrei
