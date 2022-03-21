@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Start() {
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(true);
     if(visible) {
         return (
             <div className="start">
@@ -11,6 +11,6 @@ export default function Start() {
             </div>
         )
     } else {
-        return <></>
+        return </>
     }
 }
