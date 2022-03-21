@@ -46,7 +46,7 @@ export default function Start() {
     if(visible) {
         return (
             <div className="start">
-                <img src="assets/logo.png" alt="Logo"/>
+                <img src="assets/logo.svg" alt="Logo"/>
                 <h1>ZapRecall</h1>
                 <button onClick={()=>setVisible(false)}>Iniciar Recall!</button>
             </div>

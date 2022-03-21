@@ -14,7 +14,7 @@ export default function Card(props) {
         return (
             <div className="question-description" onClick={()=>setCardState("question")}>
                 <p>{question}</p>
-                <img src="assets/setinha.png" alt="setinha" onClick={(card) => {
+                <img src="assets/setinha.svg" alt="setinha" onClick={(card) => {
                         card.stopPropagation()
                         setCardState("answer")
                     }}/>
@@ -27,21 +27,21 @@ export default function Card(props) {
                 <div className="response">
                     <div className="red" onClick={() => {
                         setCompleted(completed+1)
-                        setIconList([...iconList, <img src="assets/red.png" alt="red"/>])
+                        setIconList([...iconList, <img src="assets/red.svg" alt="red"/>])
                         setWrongAnswer(true)                      
                         setCardState("red")
                     }}>
                         Não lembrei
                     </div>
                     <div className="yellow" onClick={() => {
-                        setIconList([...iconList, <img src="assets/yellow.png" alt="yellow"/>])
+                        setIconList([...iconList, <img src="assets/yellow.svg" alt="yellow"/>])
                         setCompleted(completed+1)
                         setCardState("yellow")
                     }}>
                         Quase não lembrei
                     </div>
                     <div className="green" onClick={() => {
-                        setIconList([...iconList, <img src="assets/green.png" alt="green"/>])
+                        setIconList([...iconList, <img src="assets/green.svg" alt="green"/>])
                         setCompleted(completed+1)
                         setCardState("green")
                     }}>
@@ -54,21 +54,21 @@ export default function Card(props) {
         return (
             <div className="question">
                 <p className="text-red">Pergunta {num}</p>
-                <img src="assets/red.png" alt="red"/>
+                <img src="assets/red.svg" alt="red"/>
             </div>            
         )
     } else if (cardState === "yellow") {
         return (
             <div className="question">
                 <p className="text-yellow">Pergunta {num}</p>
-                <img src="assets/yellow.png" alt="yellow"/>
+                <img src="assets/yellow.svg" alt="yellow"/>
             </div>            
         )
     } else if (cardState === "green") {
         return (
             <div className="question">
                 <p className="text-green">Pergunta {num}</p>
-                <img src="assets/green.png" alt="green"/>
+                <img src="assets/green.svg" alt="green"/>
             </div>            
         )
     }

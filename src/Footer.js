@@ -13,7 +13,7 @@ export default function Footer(props) {
         return (
             <footer className="completed">
                 <div className="result">
-                    <img src="assets/sad.png" alt="sad"/>
+                    <img src="assets/sad.svg" alt="sad"/>
                     <h1>PUTZ!</h1>
                 </div>
                 <p>Ainda faltaram alguns... <br></br>
@@ -27,7 +27,7 @@ export default function Footer(props) {
         return (
             <footer className="completed">
                 <div className="result">
-                    <img src="assets/party.png" alt="party"/>
+                    <img src="assets/party.svg" alt="party"/>
                     <h1>PARABÉNS!</h1>
                 </div>
                 <p>Você não esqueceu de<br></br>
