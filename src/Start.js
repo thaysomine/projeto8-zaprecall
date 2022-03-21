@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Deck from './Deck';
 
 export default function Start() {
     const [visible, setVisible] = useState(true);
@@ -11,6 +12,6 @@ export default function Start() {
             </div>
         )
     } else {
-        return </>
+        return <Deck />
     }
 }
